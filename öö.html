@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezept Anzeige</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playwrite+FR+Trad:wght@100..400&display=swap" rel="stylesheet">
+    <style>
+      
+
+    </style>
+</head>
+<body>
+    <h1>Rezepte</h1>
+    
+
+    <div id="rezepteContainer"></div>
+    <button onclick="zurueck()">Neues Rezept</button>
+    
+    <div>
+   <h1>Notizen</h1>
+   <div id="notes"></div>
+    
+   <button onclick="ne()">Neue Notiz</button>
+
+    </div>
+    
+    
+    <br><br>
+    <h1>Hilfe</h1>
+    <button onclick="anleitung()">Anleitung zur App</button><br><br>
+    <h1>Benutzer Tools</h1>
+    <button onclick="mathe()">Taschenrechner</button>
+
+    <h1>Einstellungen</h1>
+    <div id="color-container">
+        <br>
+        <button id="light-mode">Light Mode</button><br><br>
+        <button id="dark-mode">Dark Mode</button><br><br>
+        <button id="green-mode">Green Mode</button><br><br>
+        <button id="blue-mode">Blue Mode</button><br><br>
+    </div>
+
+    <script src="displayNote.js"> </script>
+</body>
+</html>

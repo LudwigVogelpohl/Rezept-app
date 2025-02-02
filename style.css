@@ -1,0 +1,169 @@
+#header{
+    font-family: "Roboto Condensed", serif;
+   margin-left: 175px;
+}
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: #e7eaeb;
+    font-family: 'Calibri';
+        }
+input, textarea{
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    height: 50px;
+    border-radius: 8px;
+    width: 100%;
+            
+}
+textarea{
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    height: 50px;
+    border-radius: 8px;
+    width: 100%;
+    height: 40vh;
+}
+
+button{
+    background-color: #1ABaF9;
+    color: white;
+    border:none;
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+        }
+
+.gululu{
+    border: 1px solid;
+        }
+
+a{
+    text-decoration: none;
+    background-color: #1ABaF9;
+    color: white;
+    border:none;
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.rezept-container {
+    border: 2px solid #000;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+.rezept-details {
+    display: none;
+}
+.toggle-button {
+    cursor: pointer;
+    float: right;
+}
+
+
+/* Standard Light Mode */
+body {
+    background-color: #e7eaeb;
+    color: black;
+}
+
+.rezept-container {
+    border: 1px solid black;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+body.dark-mode .rezept-container{
+    border: 1px solid white;
+}
+
+/* Green Mode */
+body.green-mode {
+    background-color: green;
+    color: white;
+}
+
+body.green-mode .rezept-container {
+    border: 1px solid white;
+}
+
+/* Blue Mode */
+body.blue-mode {
+    background-color: blue;
+    color: white;
+}
+
+body.blue-mode .rezept-container {
+    border: 1px solid white;
+}
+
+    
+  
+.arrow-container {
+vertical-align: middle; /* oder top, je nach Bedarf */
+}
+
+.arrow-container {
+margin: 0;
+padding: 0;
+}
+
+.arrow-container {
+display: flex;
+align-items: center; /* oder flex-start, je nach Bedarf */
+}
+
+#header2{
+font-family: 'calibri';
+}
+
+
+.note {
+    border: 1px solid black;
+    margin: 10px 0;
+    padding: 10px;
+    position: relative;
+}
+.note-title {
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+}
+.note-content {
+    display: none;
+    margin-top: 10px;
+}
+.toggle-arrow {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+.edit-button {
+    margin-top: 10px;
+    display: none;
+}
+.edit-button2 {
+    margin-top: 10px;
+    display: none;
+}
+
+.delete-button {
+    margin-top: 10px;
+    display: none;
+}
+
+.header3{
+    font-family: "Playwrite FR Trad", serif;
+}
+

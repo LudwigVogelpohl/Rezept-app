@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style2.css">
+
+<style>
+
+
+    </style>
+    <Script>
+
+function appendOperation(operation) {
+            document.getElementById('resultArea').innerHTML += operation;
+        }
+
+function cali(){
+    let container = document.getElementById('resultArea');
+    let result = eval(container.innerHTML);
+    container.innerHTML = result
+}
+
+function deliction() {
+            let container = document.getElementById('resultArea');
+            if (container.innerHTML.endsWith(' ')) {
+                container.innerHTML = container.innerHTML.slice(0, -3);
+            } else {
+                container.innerHTML = container.innerHTML.slice(0, -1);
+            }
+        }
+
+        function zurueck(){
+            window.location.href = 'öö.html';
+        }
+    </script>
+</head>
+<body>
+    <button onclick="zurueck()">Zurück</button><br>
+<div id="resultArea">
+
+
+</div>
+ 
+
+
+
+<table>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td onclick="deliction()">DEL</td>
+    </tr>
+<tr>
+<td onclick="appendOperation(7)">7</td>
+<td onclick="appendOperation(8)" >8</td>
+<td onclick="appendOperation(9)" >9</td>
+<td onclick="appendOperation(' - ')" class="highlight">-</td>
+</tr>
+<tr>
+    <td onclick="appendOperation(4)">4</td>
+    <td onclick="appendOperation(5)">5</td>
+    <td onclick="appendOperation(6)">6</td>
+    <td onclick="appendOperation(' / ')" class="highlight">/</td>    
+</tr>
+<tr>
+    <td onclick="appendOperation(1)">1</td>
+    <td onclick="appendOperation(2)">2</td>
+    <td onclick="appendOperation(3)">3</td>
+    <td onclick="appendOperation(' + ')" class="highlight">+</td>
+
+</tr>
+<tr>
+    <td onclick="appendOperation(0)">0</td>
+    <td onclick="appendOperation(' .')">,</td>
+    <td onclick="cali()" id="result">=</td>
+    <td onclick="appendOperation(' * ')" class="highlight">x</td>
+
+</tr>
+    
+</table>
+
+    
+</body>
+</html>

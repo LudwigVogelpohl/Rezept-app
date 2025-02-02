@@ -1,11 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rezept Eingabe</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <a href="öö.html">Zurück</a>
+    <h1>Rezept erstellen</h1>
+    <form id="rezeptForm">
+        <label for="titel">Titel:</label>
+        <input type="text" id="titel" name="titel"><br><br>
+        <label for="zutaten">Zutaten:</label>
+        <input type="text" id="zutaten" name="zutaten"><br><br>
+        <label for="kuechengeraete">Küchengeräte:</label>
+        <input type="text" id="kuechengeraete" name="kuechengeraete"><br><br>
+        <label for="beschreibung">Anleitung:</label>
+        <textarea id="beschreibung" name="beschreibung"></textarea><br><br>
+        <button type="button" onclick="speichern()">Speichern</button>
+    </form>
+
+    <script>
+        let bearbeitungsIndex = -1;
+
+        function speichern() {
+            const titel = document.getElementById('titel').value;
+            const zutaten = document.getElementById('zutaten').value;
+            const kuechengeraete = document.getElementById('kuechengeraete').value;
+            const beschreibung = document.getElementById('beschreibung').value;
+
+            const rezepte = JSON.parse(localStorage.getItem('rezepte')) || [];
+
+            if (bearbeitungsIndex === -1) {
+                rezepte.push({ titel, zutaten, kuechengeraete, beschreibung });
+            } else {
+                rezepte[bearbeitungsIndex] = { titel, zutaten, kuechengeraete, beschreibung };
+                bearbeitungsIndex = -1;
+            }
+
+            localStorage.setItem('rezepte', JSON.stringify(rezepte));
+            window.location.href = 'öö.html';
+        }
+
+        window.onload = function() {
+            const bearbeitungsRezept = JSON.parse(localStorage.getItem('bearbeitungsRezept'));
+            if (bearbeitungsRezept) {
+                document.getElementById('titel').value = bearbeitungsRezept.titel;
+                document.getElementById('zutaten').value = bearbeitungsRezept.zutaten;
+                document.getElementById('kuechengeraete').value = bearbeitungsRezept.kuechengeraete;
+                document.getElementById('beschreibung').value = bearbeitungsRezept.beschreibung;
+                bearbeitungsIndex = bearbeitungsRezept.index;
+                localStorage.removeItem('bearbeitungsRezept');
+            }
+        }
+
+      
+
+// Beim Laden der Seite den gespeicherten Modus anwenden
+window.addEventListener('load', function() {
+    const theme = localStorage.getItem('theme');
+    if (theme) {
+        document.body.classList.add(`${theme}-mode`);
+    }
+});
+
+
+    </script>
 </body>
 </html>

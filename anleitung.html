@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button onclick="zurück()">Zurück</button>
+    <h1>Anleitung</h1>
+    <h2 id="header2">In Dieser App, kannst du deine Rezepte speichern, wieder angucken und bearbeiten. 
+        Um eine Neues Rezept zu erstellen drücke auf den Button wo es draufsteht. Jetzt kommst du zu einer Seite wo du  den Namen des rezeptes
+        festlegen. Andere Sachen kannst du ebenfalls reinschreiben in das Feld. Wenn du Fertig bist dann drücke auf Speichern 
+        und du kommst wieder auf die Startseite. Jetzt steht da dein Rezept das du ändern oder berbeiten kannst. Um ein neues Projekt zu erstellen 
+        musst du einfach wieder auf "neues Rezept" klicken und es funktioniert wie immer. Mehrere Rezepte werden Dann untereinander
+        angezeigt und manchmal musst du scrollen um diese auszuwählen. Auf der Startseite kannst du auch den Hintergrund ändern wenn du auf den 
+        Button dafür drückst. Brauchst du Hilfe dann klicke einfach auf "Anleitung zur App" wo du es nachlesen kannst. Wenn du auf der Startseite
+        bist und du weitere Informationen zum Rezept brauchst dann klicke auf den Pfeil  beim Rezept, (der nach unten zeigt) wo du sie bekommst.
+        Wenn du Notizen schreiben funktioniert das genauso wie bei dem Rezept in dem du einfach eins erstellst und wieder löscht.
+        Falls du Hilfe brauchst beim zusammenrechnen brauchst, dann musst du nach unten scrollen wo du unter der Überschrift "BenutzerTools" den Taschenrechner auswählen kannst und dort irgendwelche
+        Rechnungen ausführen kannst.
+    </h2>
+
+    <script>
+
+        function zurück(){
+            window.location.href = 'öö.html';
+        }
+
+  // Beim Laden der Seite den gespeicherten Modus anwenden
+window.addEventListener('load', function() {
+    const theme = localStorage.getItem('theme');
+    if (theme) {
+        document.body.classList.add(`${theme}-mode`);
+    }
+});
+    </script>
+</body>
+</html>
