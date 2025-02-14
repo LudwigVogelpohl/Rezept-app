@@ -130,3 +130,7 @@ document.addEventListener('DOMContentLoaded', function() {
         notesContainer.appendChild(noteElement);
     });
 });
+
+exports.default = series(scssTask, jsTask, browserSyncServe, watchTask);
+
+exports.build = series(scssTask, jsTask);
