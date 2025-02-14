@@ -18,8 +18,7 @@ window.addEventListener('load', function() {
 });
 
 function zurueck(){
-    window.location.href = 'öö.html'
-}
+    window.location.href = 'öö.html'}
 
 exports.default = series(scssTask, jsTask, browserSyncServe, watchTask);
 
